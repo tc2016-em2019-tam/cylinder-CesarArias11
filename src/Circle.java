@@ -1,3 +1,5 @@
+package com.cesaraap;
+
 public class Circle {
     private double radius;
     private String color;
@@ -36,6 +38,16 @@ public class Circle {
     public double getArea(){
         return Math.PI * this.radius * this.radius;
     }
+
+    @Override
+    public String toString() {
+        return "Circle[" +
+                "radius=" + radius +
+                ",color='" + color + '\'' +
+                ']';
+    }
+}
+
 
     @Override
     public String toString() {
