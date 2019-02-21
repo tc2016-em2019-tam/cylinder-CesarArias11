@@ -1,3 +1,5 @@
+package com.cesaraap;
+
 public class Cylinder extends Circle {
     private double height;
 
@@ -29,7 +31,20 @@ public class Cylinder extends Circle {
     }
 
     public double getVolume(){
-        return getArea() * height;
+        return super.getArea() * height;
     }
 
+    @Override
+    public double getArea(){
+        return (2 * Math.PI * getRadius() * this.height + 2 + super.getArea());
+    }
+
+    public double getBaseArea(){
+        return super.getArea();
+    }
+
+    @Override
+    public String toString(){
+        return "Cylinder> subclass of " + super.toString() + " height =" + this.height;
+    }
 }
